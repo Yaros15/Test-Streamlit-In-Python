@@ -43,3 +43,16 @@ for i in range(count):
     st.write(f"Загрузка #{i+1}: {elapsed:.2f} сек")
 
 st.dataframe(df.head())
+"""
+@st.cache_data
+def load_data(file_path, use_cache=True):
+    # Если use_cache меняется, кеш не пересоздается
+    return pd.read_csv(file_path)
+"""
+
+"""
+Очистка кеша вручную
+if st.button("Очистить кеш"):
+    st.cache_data.clear()
+    st.success("Кеш очищен!")
+"""
